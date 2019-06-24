@@ -1,0 +1,102 @@
+body {
+    background-color: #48484e !important;
+}
+
+.container {
+    max-width: 100% !important;
+}
+
+.search-bar {
+    margin: 20px;
+    text-align: center;
+}
+
+.search-bar input {
+    width: 75%;
+}
+
+.team-image {
+    width: 128px;
+    margin: 0 auto;
+    display: block;
+}
+
+.team-details {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-top: 25px;
+    background-color: white;
+}
+.team-list {
+    justify-content: center;
+}
+.team-item {
+    cursor: pointer;
+    text-align: center;
+    width: 250px;
+}
+.team-item:hover {
+    background-color: #dedede;
+}
+.team-logo {
+    margin-bottom: 25px;
+    display: flex;
+}
+.team-logo img {
+    margin: 0 auto;
+    width: 400px;
+}
+.team-description {
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    padding: 5px;
+    margin-bottom: 50px;
+}
+.team-description-text {
+    width: 70%;
+    height: 250px;
+}
+.league-seasons {
+    position: absolute;
+    width: 50%;
+}
+.league-seasons-list {
+    list-style: none;
+}
+.league-seasons-list li {
+    text-align: center;
+}
+.league-seasons-list li:hover {
+    cursor: pointer;
+    background-color: #dedede;
+}
+.description-container {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 50px;
+}
+.season-title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 28px;
+}
+.season-details {
+    width: 100%;
+    text-align: center;
+}
+.season-details-list {
+    display: inline-block;
+}
+.season-details-list:last-of-type {
+    padding: 0 10px;
+}
+
+.ajax-loader {
+    margin: 0 auto;
+    display: block;
+}
+.graph {
+    margin: 0 auto;
+}
