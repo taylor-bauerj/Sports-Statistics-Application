@@ -94,7 +94,8 @@ class HistoricalData extends Component {
                         name: opponentName
                     };
                     const layout = {
-                        title: self.props.team.strTeam + " vs " + opponentName + " historically"
+                        title: self.props.team.strTeam + " vs " + opponentName + " historically",
+                        autosize: true
                     }
 
                     self.setState({
@@ -110,7 +111,11 @@ class HistoricalData extends Component {
     render() {
         if (!this.props.selectedEvent) return <div></div>;
         if (this.state.matchedEvents.length > 0) {
-            return <Plot data={this.state.graphData} layout={this.state.layout}/>;
+            return (
+                <div className="graph">
+                    <Plot data={this.state.graphData} layout={this.state.layout} useResizeHandler={true}/>
+                </div>
+            );
         }
         return <span>Loading...</span>;
     }

@@ -3,6 +3,7 @@ import SeasonList from './season_list';
 import SeasonDetails from './season_details';
 import EventDetails from './event_details';
 import HistoricalData from './historical_data';
+import PlayerList from './player_list';
 
 class TeamDetails extends Component {
     constructor(props) {
@@ -10,7 +11,8 @@ class TeamDetails extends Component {
 
         this.state = {
             selectedEvent: null,
-            historicalData: []
+            historicalData: [],
+            selectedPlayer: null
         };
     }
 
@@ -28,6 +30,12 @@ class TeamDetails extends Component {
                 </div>
                 <div className="description-container">
                     <div className="team-description">
+                        <PlayerList
+                            team={this.props.team}
+                            onPlayerClick={selectedPlayer => {
+                                this.setState({selectedPlayer})
+                            }}
+                        />
                         <SeasonList
                             seasons={this.props.seasons}
                             onSeasonClick={this.props.onSeasonClick}
@@ -52,6 +60,7 @@ class TeamDetails extends Component {
                             selectedEvent={this.state.selectedEvent}
                         />
                     </div>
+
                 </div>
             </div>
         );

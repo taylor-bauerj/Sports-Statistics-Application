@@ -4,7 +4,7 @@ import Plot from 'react-plotly.js';
 const EventDetails = ({selectedEvent}) => {
     //console.log(selectedEvent);
 
-    if(!selectedEvent) return <div></div>
+    if (!selectedEvent) return <div></div>
 
     const figure = {
         eventData: [
@@ -15,13 +15,16 @@ const EventDetails = ({selectedEvent}) => {
             }
         ],
         layout: {
-            title: selectedEvent.strEvent + " on " + selectedEvent.dateEvent
+            title: selectedEvent.strEvent + " on " + selectedEvent.dateEvent,
+            autosize: true
         }
     }
 
 
     return (
-        <Plot data={figure.eventData} layout={figure.layout} className="graph"/>
+        <div className="graph">
+            <Plot data={figure.eventData} layout={figure.layout} useResizeHandler={true}/>
+        </div>
     );
 }
 

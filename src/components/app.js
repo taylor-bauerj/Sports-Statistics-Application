@@ -5,17 +5,10 @@ import TeamList from './team_list';
 import TeamDetails from './team_details';
 
 const url = "https://www.thesportsdb.com/api/v1/json/1/";
-
-// list all teams for certain league id
-const ALL_TEAMS = url + "lookup_all_teams.php?id=";
 // list all seasons for certain league id
 const ALL_SEASONS = url + "search_all_seasons.php?id=";
-// lookup table for league and season + league_id + &s= + season_id
-const LEAGUE_SEASON = url + "lookuptable.php?l=";
-
 // list all events for certain league and season + league_id + &s= + season_id
 const EVENTS_SEASON = url + "eventsseason.php?id=";
-
 // search for team by name
 const SEARCH_TEAM = url + "searchteams.php?t=";
 
